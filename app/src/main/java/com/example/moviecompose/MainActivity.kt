@@ -13,7 +13,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.moviecompose.ui.theme.MovieComposeTheme
 import com.google.gson.internal.GsonBuildConfig
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
 //    curl --request GET \
@@ -22,6 +24,8 @@ class MainActivity : ComponentActivity() {
     //https://api.themoviedb.org/3/movie/2?language=pt-BR
 //    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0Mjk0NmZlZjZkMThhMzBiM2YxYmJhNTcyNGM3M2Y4ZiIsIm5iZiI6MTYzMjQxNTMxMC44NTIsInN1YiI6IjYxNGNhZTRlYzI4MjNhMDA2NDQ0NTUyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Kio8pHO8fbCtxnVhmNKwGEy1yV3mM9fB50UF3HC8KN8' \
 //    --header 'accept: application/json'
+    //search https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -32,7 +36,7 @@ class MainActivity : ComponentActivity() {
             MovieComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "Luiz Furmann",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

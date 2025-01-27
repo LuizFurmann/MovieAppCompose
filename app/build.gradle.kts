@@ -120,11 +120,10 @@ dependencies {
     //DI - Hilt
     implementation ("com.google.dagger:hilt-android:2.45")
     implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
-    kapt ("com.google.dagger:hilt-compiler:2.45")
-    kapt ("androidx.hilt:hilt-compiler:1.0.0")
 
-    //Room
-    implementation ("androidx.room:room-ktx:2.4.2")
-    implementation ("androidx.room:room-runtime:2.4.2")
-    kapt ("androidx.room:room-compiler:2.4.2")
+
+//    //Room
+//    implementation ("androidx.room:room-ktx:2.4.2")
+//    implementation ("androidx.room:room-runtime:2.4.2")
+//    kapt ("androidx.room:room-compiler:2.4.2")
 }

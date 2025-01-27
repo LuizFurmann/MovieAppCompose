@@ -41,7 +41,7 @@ data class MovieDetailsResponse(
     @SerializedName("release_date")
     val releaseDate: String,
     @SerializedName("revenue")
-    val revenue: Int,
+    val revenue: Long,
     @SerializedName("runtime")
     val runtime: Int,
     @SerializedName("spoken_languages")
