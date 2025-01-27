@@ -119,7 +119,9 @@ dependencies {
 
     //DI - Hilt
     implementation ("com.google.dagger:hilt-android:2.45")
-    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    implementation("androidx.compose.material:material:1.7.6")
 
 
 //    //Room

@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.moviecompose.core.presentation.MainScreem
 import com.example.moviecompose.ui.theme.MovieComposeTheme
 import com.google.gson.internal.GsonBuildConfig
 import dagger.hilt.android.AndroidEntryPoint
@@ -34,29 +36,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MovieComposeTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Luiz Furmann",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                MainScreem(navController = rememberNavController())
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Eng. $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MovieComposeTheme {
-        Greeting("Luiz Furmann")
     }
 }
