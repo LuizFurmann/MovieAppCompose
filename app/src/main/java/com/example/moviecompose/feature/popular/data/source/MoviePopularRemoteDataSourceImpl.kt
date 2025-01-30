@@ -4,8 +4,9 @@ import com.example.moviecompose.core.data.remote.MovieService
 import com.example.moviecompose.core.data.remote.response.MovieResponse
 import com.example.moviecompose.core.paging.MoviePagingSource
 import com.example.moviecompose.feature.popular.domain.source.MoviePopularRemoteDataSource
+import javax.inject.Inject
 
-class MoviePopularRemoteDataSourceImpl constructor(
+class MoviePopularRemoteDataSourceImpl @Inject constructor(
     private val service: MovieService
 ) : MoviePopularRemoteDataSource{
 
@@ -13,7 +14,7 @@ class MoviePopularRemoteDataSourceImpl constructor(
         return service.getPopularMovies(page = page)
     }
 
-    override fun getPopularmoviesPagingSource(): MoviePagingSource {
+    override fun getPopularMoviesPagingSource(): MoviePagingSource {
         return MoviePagingSource(this)
     }
 
