@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovieCompose</string>
+
+    <string name="popupar_movies">Filmes populares</string>
 </resources>

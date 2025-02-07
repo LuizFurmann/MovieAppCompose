@@ -59,7 +59,6 @@ fun MovieItem(
                         .data(imageUrl)
                         .crossfade(true)
                         .error(R.drawable.ic_error_image)
-                        .placeholder(R.drawable.ic_placeholder)
                         .build(),
                     contentDescription = "",
                     contentScale = ContentScale.FillWidth,
@@ -72,18 +71,4 @@ fun MovieItem(
             }
         }
     }
-}
-
-@Preview
-@Composable
-fun MovieItemPreview(){
-    MovieItem(
-        modifier = Modifier,
-        voteAvarage = 7.2,
-        imageUrl = "",
-        id = 1,
-        onClick = {
-
-        }
-    )
 }

@@ -5,7 +5,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id ("kotlin-kapt")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    id("dagger.hilt.android.plugin")
 }
 
 fun apikeyPropertiesFile() : File = rootProject.file("apikey.properties")
@@ -93,10 +95,10 @@ dependencies {
     implementation ("com.google.code.gson:gson:2.10")
 
     // Others - Compose dependencies
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-    implementation ("androidx.compose.material:material-icons-extended:1.4.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+    implementation ("androidx.compose.material:material-icons-extended:1.7.7")
     implementation ("com.google.accompanist:accompanist-flowlayout:0.17.0")
-    implementation ("androidx.navigation:navigation-compose:2.5.3")
+    implementation ("androidx.navigation:navigation-compose:2.8.6")
 
     // Paging3
     implementation ("androidx.paging:paging-runtime-ktx:3.1.1")
@@ -118,11 +120,9 @@ dependencies {
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
 
     //DI - Hilt
-    implementation ("com.google.dagger:hilt-android:2.45")
+    implementation ("com.google.dagger:hilt-android:2.49")
     implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
-
-    implementation("androidx.compose.material:material:1.7.6")
-
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 
 //    //Room
 //    implementation ("androidx.room:room-ktx:2.4.2")
